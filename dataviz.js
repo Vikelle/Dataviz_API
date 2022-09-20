@@ -19,6 +19,7 @@ async function fetchImage(url, tint) {
   return result;
 }
 
+
 // DATA FUNCTIONS
 
 function getWeatherData(data) {
@@ -33,22 +34,13 @@ function getWeatherData(data) {
       temperature: temperature
     };
   } catch (error) {
-    // En cas d'erreur de parsing, nous retournons une teinte par défaut
+    // En cas d'erreur de parsing, on retourne une teinte par défaut
     console.log("Erreur : " + error);
     return {
       success: false
     };
   }
 }
-
-/*
-  - fonction qui sapl et qui prend data en param (retour d'api)
-  - qui retourne un obj => trucs qui minteressent (condensé des data d'api)
-
-  - il est possible qu'une donneée manque, je met la recup d'info dans un try catch
-  - le but du tr catch est d'assurer la bonne exec d'un bloc de code
-  - une fois les donneées recup, je construit un objet que je retourne
-*/
 
 function getTint(iconName) {
   // Table de correspondance du nom des icones renvoyées par l'API avec une teinte
@@ -66,6 +58,7 @@ function getTint(iconName) {
   let tint = colorDictionnary[iconName];
   return tint;
 }
+
 
 // DISPLAY FUNCTIONS
 
@@ -86,6 +79,7 @@ function displayImage(images) {
     console.log("Erreur : " + error);
   }
 }
+
 
 async function main() {
   const weatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=9dc1ac654e99ad5e689b88fde5a5fd33&units=metric";
