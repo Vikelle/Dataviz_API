@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*images*/
+.icons{
+    height: 100%;
+}
+
+.folder p{
+    margin: -5px;
+    text-align: center;
+    width: 5%;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.folder{
+    padding: 15px 0px 0px 15px;
+    margin-bottom: 22px;
+    /*
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;*/  
+}
+
+
+/*météo*/
+.meteo{
+   position: absolute;
+   /*justify-content: right;*/
+   /*display: flex;*/
+   top: 5px;
+   left: 1400px;
+   right: 0px;
+   bottom: 500px;
+}
+
+
+#temperature, #ville, #w-icon{
+    text-align: center;
+    justify-items: center;
+}
+
+#temperature{
+    margin-top: -15px;
+}
+
+#temperature, #ville{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*image*/
+#background-img{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+    z-index : -1;
+    width: 100%;
+    height: 100%;
+} 
+
+/*footer*/
+.footer{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 5%;
+    background-color: rgb(119, 112, 112);
+}
